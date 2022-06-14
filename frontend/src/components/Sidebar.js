@@ -42,7 +42,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
           <i className='fas fa-info'></i>
           <Link className='linked' to='/student_details'>
             Student Details
-             
+
           </Link>
         </div>
         <div className='sidebar__link'>
@@ -60,7 +60,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <div className='sidebar__logout'>
           <i className='fa fa-power-off'></i>
           <Link className='linked' onClick={logoutHandler} to='/login'>
-            Log out
+            Logout
           </Link>
         </div>
       </div>
