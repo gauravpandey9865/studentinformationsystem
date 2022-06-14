@@ -5,6 +5,7 @@ import Classes from './classData'
 import ClassItems from '../components/ClassItems'
 const StudentAttendance = () => {
   return (
+    
     <div className='container2'>
       <div className='outer'>
         <h3>Select the Class </h3>
