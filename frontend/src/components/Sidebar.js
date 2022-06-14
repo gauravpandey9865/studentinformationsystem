@@ -35,7 +35,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <div className='sidebar__link'>
           <i className='fa fa-male' aria-hidden='true'></i>
           <Link className='linked' to='/student-register'>
-            Student Registration
+            Student Registrations
           </Link>
         </div>
         <div className='sidebar__link'>
