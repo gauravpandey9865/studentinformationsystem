@@ -1,7 +1,11 @@
+:root {
+  --primary-color: #3B44F6;
+}
+
 .navbar {
     background: #ffffff;
     grid-area: nav;
-    background:#2F8F9D;
+    background:var(--primary-color);
 
     height: 70px;
     display: flex;
