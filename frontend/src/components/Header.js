@@ -19,12 +19,8 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
         </a>
       </div>
        */}
-      <div className='navbar__right'>
-        <span className='loggedinas'>
-          <img src={userCred && userCred.image} />
-          {/* <p>{userCred && userCred.name}</p> */}
-        </span>
-      </div>
+      
+      
     </nav>
   )
 }

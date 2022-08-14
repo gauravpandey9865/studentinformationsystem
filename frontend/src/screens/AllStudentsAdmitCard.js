@@ -25,20 +25,11 @@ const AllStudentsAdmitCard = () => {
     dispatch(listStudents())
   }, [dispatch])
   return (
-    // const AdmitCard = ({ examination, name, classname, rollno, image }) => {
+    
 
     <div className='container1'>
       <div className='exam'>
-        {/* <form onSubmit={handleSubmit}>
-          <input
-            className='examNumber'
-            type='text'
-            value={examno}
-            onChange={(e) => setExamno(e.target.value)}
-            placeholder='Enter the examination number'
-          />
-          <button type='submit'>Enter</button>
-        </form> */}
+      
       </div>
       {loading ? (
         <Loader />
@@ -46,6 +37,7 @@ const AllStudentsAdmitCard = () => {
         students &&
         students.map((student) => (
           <div key={student._id} className='arrange'>
+            {console.log(student)}
             <AdmitCard
               examination='Terminal Examination'
               name={student.student_name}

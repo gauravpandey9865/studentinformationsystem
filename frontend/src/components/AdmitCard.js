@@ -31,7 +31,6 @@ export class AdmitCard extends React.Component {
           </div>
           <div className='admitCardBottom' style={{ textAlign: 'center' }}>
             <h4>In case any problem occurs, contact your school.</h4>
-            {/* <h4>In case any problem occurs, contact your school.</h4> */}
           </div>
         </div>
       </div>

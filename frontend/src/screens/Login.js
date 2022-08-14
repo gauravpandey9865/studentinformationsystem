@@ -16,33 +16,28 @@ const Login = ({ history, location }) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { loading, error, userCred } = userLogin
   const toggleVisibility = () => {
-    // console.log('clicked')
+  
     setToggle(!toggle)
-    // if (password.type === 'password') {
-    //   password.type = 'text'
-    // } else {
-    //   password.type = 'password'
-    // }
+    
   }
   const hideShow = () => {}
 
   useEffect(() => {
     if (userCred) {
       console.log(userCred)
-      // console.log('there is userCred')
-      // console.log(userCred)
+    
       history.push(redirect)
     }
   }, [history, userCred, redirect])
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
-    // console.log('form submitted')
+   
   }
   return (
     <div className='container'>
       <div className='layout'>
-        <h1>Sign In</h1>
+        <h1>Sign In </h1>
         {error && <Message variant='danger ' message={error} />}
         {loading ? (
           <Loader />
@@ -89,7 +84,7 @@ const Login = ({ history, location }) => {
           </form>
         )}
 
-        {/* {} */}
+        
       </div>
     </div>
   )

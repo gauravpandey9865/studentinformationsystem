@@ -1,5 +1,5 @@
 #sidebar {
-    background: #FFC54D;
+    background:#3b2747;
     grid-area: sidebar;
     /* overflow-y: scroll; */
     overflow-y: auto;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #f3f4f6;
+    color: black;
     margin-bottom: 30px;
     /* color: #E85B6B; */
   }
@@ -52,7 +52,7 @@
   }
   
   .sidebar__link {
-    color: #350bf0;
+    color: #c7594b;
    
     cursor: pointer;
     border-radius: 3px;
@@ -66,7 +66,7 @@
   
   .active_menu_link {
     background: #d61663;
-    color: #350bf0;
+    color: #3b2747;
   }
   
   .active_menu_link .linked {

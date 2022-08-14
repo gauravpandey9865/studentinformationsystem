@@ -4,12 +4,19 @@ import axios from 'axios'
 import './Main.css'
 import DashboardCard from './DashboardCard'
 import Footer from './Footer'
+import background from './../../src/ball.jpg'
 const Main = () => {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState()
+  const myStyle={
+    backgroundImage: `url(${background})`,
+    height:'150vh',
+    marginTop:'-70px',
+    fontSize:'50px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+};
   useEffect(() => {
-    //  console.log("this is me upendra dhamala.")
-    // await axios.get('/api/students/:classes')
     const fetchItems = async () => {
       setLoading(true)
       const { data } = await axios.get('/dashboard')
@@ -22,6 +29,7 @@ const Main = () => {
 
   return (
     <main>
+      <div style={myStyle}></div>
       <div className='main__container'>
         {loading ? (
           <Loader />
@@ -32,7 +40,7 @@ const Main = () => {
             {/* {console.log('dfsdf')} */}
             {/* {loading ? <Loader/>: } */}
             {items.map((item) => (
-              // <div key={item._id}>
+              
               <DashboardCard
                 key={item?._id}
                 takeme={item?.takeme}

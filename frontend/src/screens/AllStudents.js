@@ -5,7 +5,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { deleteStudent } from '../actions/studentActions'
 
-const AllStudents = ({  }) => {
+const AllStudents = ({ }) => {
   const dispatch = useDispatch()
   const studentList = useSelector((state) => state.studentList)
   const { loading, students, error } = studentList
@@ -65,14 +65,7 @@ const AllStudents = ({  }) => {
                 </tr>
               </thead>
               <tbody>
-                {/* {match.params.id===data.id && */}
-                {/* {console.log(matchid)} */}
-                {/* {"A"==="A" ?():(
-
-)} */}
-                {/* for displaying the information about the particular class
-only we first should have the data of that class only 
-. We cannot make selection inside the map method by using double and operator. */}
+                {console.log("student", students)}
                 {students.map((data) => (
                   <tr key={data._id} className='contents'>
                     <td>{i++}</td>

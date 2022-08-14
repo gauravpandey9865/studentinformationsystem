@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #3B44F6;
+  --primary-color:grey;
 }
 
 .navbar {
@@ -10,11 +10,11 @@
     height: 70px;
     display: flex;
     align-items: center;
-    /* align-content: center; */
+     align-content: center; 
     justify-content: space-between;
     padding: 0 30px 0 30px;
-    /* overflow:auto; */
-    /* border-bottom: 1px solid #fc1100; */
+     overflow:auto; 
+     border-bottom: 1px solid #fc1100; 
   }
   .navbar p{
     padding:2px;

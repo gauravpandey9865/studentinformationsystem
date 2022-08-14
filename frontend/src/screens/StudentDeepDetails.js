@@ -48,16 +48,14 @@ const StudentDetails = ({ match }) => {
               <thead>
                 <tr>
                   <th>SN</th>
-                  <th>Photo</th>
+                  {/* <th>Photo</th> */}
                   <th>Student Name</th>
                   <th>Class</th>
                   <th>Roll No</th>
                   <th>Address</th>
                   <th>Parent's Name</th>
                   <th>Contact No</th>
-                  <th>Previous Dues</th>
                   <th>Gender</th>
-                  <th>Edit</th>
                   <th>Delete</th>
                 </tr>
               </thead>
@@ -65,27 +63,18 @@ const StudentDetails = ({ match }) => {
                 {students.map((data) => (
                   <tr key={data._id} className='contents'>
                     <td>{i++}</td>
-                    <td>
+                    {/* <td>
                       <img style={{ height: '50px' }} src={data.image} alt='' />
-                    </td>
+                    </td> */}
                     <td>{data.student_name}</td>
                     <td>{data.classname}</td>
                     <td>{data.roll_no}</td>
                     <td>{data.address}</td>
                     <td>{data.parents_name}</td>
                     <td>{data.contact_no}</td>
-                    <td>{data.previous_dues}</td>
+                    
                     <td>{data.gender}</td>
-                    <td>
-                      <i
-                        style={{
-                          padding: '8px',
-                          color: 'green',
-                          fontSize: '25px',
-                        }}
-                        className='fas fa-user-edit'
-                      ></i>
-                    </td>
+                    
                     <td>
                       <i
                         style={{

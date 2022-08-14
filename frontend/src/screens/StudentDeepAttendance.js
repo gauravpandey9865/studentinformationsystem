@@ -11,6 +11,7 @@ const StudentDeepAttendance = ({ match }) => {
   const matchid = match.params.class
   const [studentlist, setStudentlist] = useState([])
   const [present, setPresent] = useState({})
+  const [classteacher,setClassTeacher]=useState("")
   const dispatch = useDispatch()
   const [clicked, setClicked] = useState(false)
   const studentAttendance = useSelector((state) => state.studentAttendance)
@@ -33,7 +34,8 @@ const StudentDeepAttendance = ({ match }) => {
         `/api/students/class/${matchid}/attendance`
       )
       setStudentlist(data.students)
-      // console.log('attended once', data)
+      setClassTeacher("Attendance taken by: "+data.class_teacher);
+     
     }
     studentsAttend()
     dispatch({
@@ -43,7 +45,7 @@ const StudentDeepAttendance = ({ match }) => {
   }, [dispatch, matchid])
   var i = 1
   const submitAttendance = () => {
-    // console.log(studentlist)
+    console.log(studentlist)
     console.log('students list', students)
     dispatch(studentAttendances(matchid, students))
   }
@@ -67,6 +69,7 @@ const StudentDeepAttendance = ({ match }) => {
             {new NepaliDate().format('YYYY-MM-D')}
           </span>{' '}
         </h1>
+        <h3>{classteacher}</h3><br></br>
         {studentlist.length > 0 && (
           <h3
             style={{ textAlign: 'center', background: 'red', padding: '3px' }}
@@ -95,6 +98,8 @@ const StudentDeepAttendance = ({ match }) => {
                 <th>Student Name</th>
                 <th>Roll No</th>
                 <th>Attendance</th>
+          
+                
               </tr>
             </thead>
             <tbody>
@@ -112,6 +117,7 @@ const StudentDeepAttendance = ({ match }) => {
                       >
                         {student.present ? 'Present' : 'Absent'}
                       </td>
+                  
                     </tr>
                   ))
                 : studentsfinal &&
@@ -131,7 +137,9 @@ const StudentDeepAttendance = ({ match }) => {
                   ))}
             </tbody>
           </table>
+          
         )}
+        
         {studentsfinal && (
           <button
             onClick={submitAttendance}
@@ -152,3 +160,4 @@ const StudentDeepAttendance = ({ match }) => {
 }
 
 export default StudentDeepAttendance
+

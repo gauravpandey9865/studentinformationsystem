@@ -170,7 +170,9 @@ const StudentRegister = ({ history }) => {
               <div className='form-control'>
                 <label htmlFor='name'>Phone Number</label>
                 <input
-                  type='text'
+                  type='Tel'
+                  minlength="10"
+                  maxLength="10"
                   value={phoneno}
                   onChange={(e) => setPhoneno(e.target.value)}
                   required
@@ -185,10 +187,7 @@ const StudentRegister = ({ history }) => {
                   required
                 />
               </div>
-              {/* <div className='form-control'>
-              <label htmlFor='name'>Joining Date</label>
-              <input type='date' />
-            </div>{' '} */}
+              
               <div className='form-control'>
                 <label htmlFor='name'>Age</label>
                 <input
@@ -226,8 +225,7 @@ const StudentRegister = ({ history }) => {
                   />
                 )}
               </div>
-              {/* <div className="register-btn"> */}
-              {/* </div> */}
+           
             </div>
             {success && valid && (
               <Message

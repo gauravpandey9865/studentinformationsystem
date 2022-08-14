@@ -51,12 +51,12 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             Student Attendance
           </Link>
         </div>
-        {/* <div className='sidebar__link'>
+        <div className='sidebar__link'>
           <i className='far fa-sticky-note'></i>
           <Link className='linked' to='/admit_card'>
             Admit Card
           </Link>
-        </div> */}
+        </div> 
         <div className='sidebar__logout'>
           <i className='fa fa-power-off'></i>
           <Link className='linked' onClick={logoutHandler} to='/login'>

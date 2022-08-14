@@ -13,7 +13,7 @@
 }
 .card1 h1{
    color:white;
-   /* text-transform: uppercase; */
+   
 
 }
 .card1 .p{
@@ -22,22 +22,13 @@
 
 }
 .card1 img{
-   /* max-width:px; */
+  
    height:100px;
    width: 250px;
    border-radius: 50%;
-   /* border */
+  
    border:2px solid white;
-   /* border: 2px rounded red; */
-   /* max-width:300px; */
-   /* border: 2px solid red; */
-
-   /* position: fixed; */
-   /* bottom:0;  */
-   /* display: block; */
-   /* position: absolute; */
-   /* padding-left: -1px; */
-   /* margin-left: -4.8px; */
+   
 }
 @media only screen and (max-width: 600px) {
   
